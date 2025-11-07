@@ -1,0 +1,22 @@
+body {
+    font-family: sans-serif;
+    padding: 20px;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    width: 250px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-top: 20px;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.card-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}

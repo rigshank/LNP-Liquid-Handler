@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import './styles.css';
+import MachineCard from './components/MachineCard';
+import prototype1 from './images/prototype1testimage.jpg';
 
 function App() {
+
+  const [machineAvailability, setMachineAvailability] = useState("Available");
+
+  const selectMachine = () => {
+    setMachineAvailability("Unavailable");
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>LNP Automatic Pipetting System</h1>
+      <p>Please select an available machine.</p>
+      <MachineCard
+        name="Prototype 1"
+        image={prototype1}
+        status={machineAvailability}
+        onSelect={selectMachine}
+      />
     </div>
   );
 }
