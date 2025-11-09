@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './styles.css';
 import MachineCard from './components/MachineCard';
+import WellPlate from './components/WellPlate';
 import prototype1 from './images/prototype1testimage.jpg';
 
 function App() {
