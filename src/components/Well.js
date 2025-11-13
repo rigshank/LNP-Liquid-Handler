@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 
-function Well() {
+function Well(onSelect) {
 
     const [wellState, setWellState] = useState("Unselected");
 
-    const selectWell = () => { }
+    let selected = wellState === "Selected";
 
     return (
     <div className='well'>
 
-        <button className='well-button' onclick='selectWell'> </button>
+        <button className='well-button' style={{ 'backgroundColor': selected ? "blue" : "green" }}
+                onClick={onSelect}> </button>
 
     </div>
     )

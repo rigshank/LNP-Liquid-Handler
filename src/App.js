@@ -21,8 +21,9 @@ function App() {
         image={prototype1}
         status={machineAvailability}
         onSelect={selectMachine}
-      />
-    </div>
+          />
+          <WellPlate name="name" height="8" width="12"></WellPlate>
+      </div>
   );
 }
 
