@@ -6,12 +6,14 @@ import prototype1 from './images/prototype1testimage.jpg';
 
 function App() {
 
-  const [machineAvailability, setMachineAvailability] = useState("Available");
+    const [machineAvailability, setMachineAvailability] = useState("Available");
+    const [machineSelected, setMachineSelected] = useState("Unselected");
 
   const selectMachine = () => {
-    setMachineAvailability("Unavailable");
+      setMachineAvailability("Unavailable");
+      setMachineSelected("Selected")
   }
-
+    
   return (
     <div>
       <h1>LNP Automatic Pipetting System</h1>
@@ -22,7 +24,7 @@ function App() {
         status={machineAvailability}
         onSelect={selectMachine}
           />
-          <WellPlate name="name" height="8" width="12"></WellPlate>
+          <WellPlate name="96 Well Plate" height="8" width="12" disabled={machineSelected } ></WellPlate>
       </div>
   );
 }

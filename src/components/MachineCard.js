@@ -2,7 +2,7 @@ import React from 'react';
 
 function MachineCard({name, image, status, onSelect}) {
     const isAvailable = status === 'Available';
-
+    
     return (
     <div className='card'>
         <h3>{name}</h3>
